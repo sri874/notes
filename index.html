@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowNotes - Premium Note Taking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="A premium, glassmorphic notes taking application for modern workflows.">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <h1>Glow<span>Notes</span></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search your notes...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="note-input-section">
+                <div class="note-input-card">
+                    <input type="text" id="noteTitle" placeholder="Title" class="input-field title-input">
+                    <textarea id="noteContent" placeholder="Take a note..." class="input-field content-input"></textarea>
+                    <div class="input-actions">
+                        <button id="addNoteBtn" class="primary-btn">Add Note</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="notes-display-section">
+                <div id="notesGrid" class="notes-grid">
+                    <!-- Notes will be injected here by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Note</h2>
+            <input type="text" id="editTitle" class="input-field title-input">
+            <textarea id="editContent" class="input-field content-input"></textarea>
+            <button id="saveEditBtn" class="primary-btn">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
